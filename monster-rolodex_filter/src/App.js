@@ -3,21 +3,37 @@ import logo from './monster.png';
 import './App.css';
 
 class App extends Component{
+
+  constructor(){
+    super();
+    this.state = {
+      monsters: [
+        {
+          id: '1',
+          name: 'Dracula'
+        },
+        {
+          id: '2',
+          name: 'Zombie'
+        },
+        {
+          id: '3',
+          name: 'Anonymous'
+        }
+      ]
+    };
+  }
+
   render(){
     return(
       <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>
-          Monster Rolodex
-        </h2>
-        <h4>
-          Hamza Aamir
-        </h4>
-      </header>
-    </div>
+        {this.state.monsters.map(monster => (
+          <h1 key={monster.id}>{monster.name}</h1>
+        ))}
+      </div>
     );
   };
+
 }
 
 export default App;
