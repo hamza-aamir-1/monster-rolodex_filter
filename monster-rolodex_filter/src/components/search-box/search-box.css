@@ -1,9 +1,19 @@
 .search {
     -webkit-appearance: none;
-    border: none;
+    border: 2px solid rgba(0, 128, 128, 1);
     outline: none;
-    padding: 10px;
-    width: 150px;
+    padding: 7px 10px;
+    width: 200px;
     line-height: 30px;
     margin-bottom: 30px;
+    font-size: 18px;
+    transition-duration: 0.4s;
+    background-color: rgba(7, 27, 82, 1);
+    color: silver;
 }  
+.search:focus{
+    width: 250px;
+}
+.search::placeholder{
+    color: silver;
+}
