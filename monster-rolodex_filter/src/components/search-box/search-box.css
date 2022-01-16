@@ -17,3 +17,12 @@
 .search::placeholder{
     color: silver;
 }
+@media screen and (max-width: 600px) {
+    .search{
+        font-size: 16px;
+        width: 170px;
+    }
+    .search:focus{
+        width: 200px;
+    }
+  }
